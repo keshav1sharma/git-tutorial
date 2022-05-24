@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+#define PI 3.14
+
+#ifdef PI
+#if (PI != 3.1425)
+#define PI = 3.1425
+#endif
+#endif
+
+#ifndef Hi // if not defined
+#define Hi ("hello")
+#endif
+
+#define MAX(x, y) (x > y ? x : y) //
+
+#define MSG(x) #x // single '#'to convert x into string
+
+#define CON(a, b) a##b // double'##' is used to concatinate
+
+int main()
+{
+    cout << PI << endl;
+    cout << Hi << endl;
+    cout << MAX(12, 54) << endl;
+    cout << CON(12, 34) << endl;
+    cout << MSG(keshav);
+}
